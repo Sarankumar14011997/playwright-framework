@@ -1,0 +1,33 @@
+Rows from Sheet2: 1
+
+--- Running for state: AL | Producer: HHL01-A ---
+Step 1: Application Details Test Started
+Step 2: New Business Test Started
+Step 3: STATE and LOB Selection Test Started
+Step 4: Producer Test Started
+[Playwright Action] Press "Enter" → locator('//input[@placeholder=\'Pick a producer\']')
+Step 5: Client Information Test Started
+[Playwright Action] Press "Tab" → locator('//input[@placeholder="Search Firm Name"]')
+[Playwright Action] Press "Tab" → locator('#effDate1')
+Step 6: Application Details Test Started
+Step 7: Areas of Practice Test Started
+Step 8: Optional Coverages Test Started
+Step 9: Claim Information Test Started
+Step 10: Individual Risk Management Test Started
+Step 11: Quote Selection & Contingencies Test Started
+Selected Limit: $ 250,000 / $ 250,000
+✅ Selected Deductible: $ 2,000
+Available options: [ 'Select All\n100% CEIL\n100% CEAL\n50% CEAL\n25% CEAL\n10% CEAL' ]
+✅ Selected Limit Type: 100% CEIL
+Available options: [
+  'Select All\n' +
+    'Loss & Expense\n' +
+    'Loss Only\n' +
+    'Loss & Expense 1x Agg\n' +
+    'Loss Only 1x Agg\n' +
+    'Loss & Expense 3x Agg\n' +
+    'Loss Only 3x Agg'
+]
+✅ Selected Deductible Type: Loss Only
+✅ Quote Selection & Contingencies saved successfully
+Step 12: Endorsements Test Started

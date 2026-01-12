@@ -1,0 +1,2 @@
+Save toast not found; continuing but verify manually for this row.
+HighlightWrapper: Element not found, skipping click.

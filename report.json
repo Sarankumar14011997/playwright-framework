@@ -1,0 +1,245 @@
+{
+  "config": {
+    "configFile": "D:\\Landydev_playwright\\playwright.config.js",
+    "rootDir": "D:/Landydev_playwright/tests",
+    "forbidOnly": false,
+    "fullyParallel": true,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "always"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "report.json"
+        }
+      ],
+      [
+        "D:\\Landydev_playwright\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "D:/Landydev_playwright/test-results",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "D:/Landydev_playwright/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 300000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.56.1",
+    "workers": 3,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ACSTD\\ACSTD_Inforce.spec.js",
+      "file": "ACSTD/ACSTD_Inforce.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "ACSTD-Direct Excel",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 167333,
+                  "error": {
+                    "message": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//button[@id=\\'quoteDateDialog\\'])[2]')\u001b[22m\n",
+                    "stack": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//button[@id=\\'quoteDateDialog\\'])[2]')\u001b[22m\n\n    at D:\\Landydev_playwright\\tests\\ACSTD\\ACSTD_Inforce.spec.js:324:31",
+                    "location": {
+                      "file": "D:\\Landydev_playwright\\tests\\ACSTD\\ACSTD_Inforce.spec.js",
+                      "column": 31,
+                      "line": 324
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 322 |\u001b[39m         \u001b[90m//QUOTE MAIL\u001b[39m\n \u001b[90m 323 |\u001b[39m         \u001b[36mconst\u001b[39m \u001b[33mQuotemailButton\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//button[@id='quoteDateDialog'])[2]\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 324 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mQuotemailButton\u001b[39m\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'attached'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 325 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[33mQuotemailButton\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 326 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[33mQuotemailButton\u001b[39m)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m 327 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mQuotemailButton\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\Landydev_playwright\\tests\\ACSTD\\ACSTD_Inforce.spec.js",
+                        "column": 31,
+                        "line": 324
+                      },
+                      "message": "TimeoutError: locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('xpath=(//button[@id=\\'quoteDateDialog\\'])[2]')\u001b[22m\n\n\n\u001b[0m \u001b[90m 322 |\u001b[39m         \u001b[90m//QUOTE MAIL\u001b[39m\n \u001b[90m 323 |\u001b[39m         \u001b[36mconst\u001b[39m \u001b[33mQuotemailButton\u001b[39m \u001b[33m=\u001b[39m page\u001b[33m.\u001b[39mlocator(\u001b[32m\"(//button[@id='quoteDateDialog'])[2]\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 324 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mQuotemailButton\u001b[39m\u001b[33m.\u001b[39mwaitFor({ state\u001b[33m:\u001b[39m \u001b[32m'attached'\u001b[39m\u001b[33m,\u001b[39m timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                               \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 325 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[33mQuotemailButton\u001b[39m)\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 326 |\u001b[39m         \u001b[36mawait\u001b[39m expect(\u001b[33mQuotemailButton\u001b[39m)\u001b[33m.\u001b[39mtoBeEnabled()\u001b[33m;\u001b[39m\n \u001b[90m 327 |\u001b[39m         \u001b[36mawait\u001b[39m \u001b[33mQuotemailButton\u001b[39m\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at D:\\Landydev_playwright\\tests\\ACSTD\\ACSTD_Inforce.spec.js:324:31\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "Rows from Sheet2: \u001b[33m1\u001b[39m\n"
+                    },
+                    {
+                      "text": "\n--- Running for state: AL | Producer: HHL01-A ---\n"
+                    },
+                    {
+                      "text": "Step 1: Application Details Test Started\n"
+                    },
+                    {
+                      "text": "Step 2: New Business Test Started\n"
+                    },
+                    {
+                      "text": "Step 3: STATE and LOB Selection Test Started\n"
+                    },
+                    {
+                      "text": "Step 4: Producer Test Started\n"
+                    },
+                    {
+                      "text": "[Playwright Action] Press \"Enter\" → locator('//input[@placeholder=\\'Pick a producer\\']')\n"
+                    },
+                    {
+                      "text": "Step 5: Client Information Test Started\n"
+                    },
+                    {
+                      "text": "[Playwright Action] Press \"Tab\" → locator('//input[@placeholder=\"Search Firm Name\"]')\n"
+                    },
+                    {
+                      "text": "[Playwright Action] Press \"Tab\" → locator('#effDate1')\n"
+                    },
+                    {
+                      "text": "Step 6: Application Details Test Started\n"
+                    },
+                    {
+                      "text": "Step 7: Areas of Practice Test Started\n"
+                    },
+                    {
+                      "text": "Step 8: Optional Coverages Test Started\n"
+                    },
+                    {
+                      "text": "Step 9: Claim Information Test Started\n"
+                    },
+                    {
+                      "text": "Step 10: Individual Risk Management Test Started\n"
+                    },
+                    {
+                      "text": "Step 11: Quote Selection & Contingencies Test Started\n"
+                    },
+                    {
+                      "text": "Selected Limit: $ 250,000 / $ 250,000\n"
+                    },
+                    {
+                      "text": "✅ Selected Deductible: $ 2,000\n"
+                    },
+                    {
+                      "text": "Available options: [ \u001b[32m'Select All\\n100% CEIL\\n100% CEAL\\n50% CEAL\\n25% CEAL\\n10% CEAL'\u001b[39m ]\n"
+                    },
+                    {
+                      "text": "✅ Selected Limit Type: 100% CEIL\n"
+                    },
+                    {
+                      "text": "Available options: [\n  \u001b[32m'Select All\\n'\u001b[39m +\n    \u001b[32m'Loss & Expense\\n'\u001b[39m +\n    \u001b[32m'Loss Only\\n'\u001b[39m +\n    \u001b[32m'Loss & Expense 1x Agg\\n'\u001b[39m +\n    \u001b[32m'Loss Only 1x Agg\\n'\u001b[39m +\n    \u001b[32m'Loss & Expense 3x Agg\\n'\u001b[39m +\n    \u001b[32m'Loss Only 3x Agg'\u001b[39m\n]\n"
+                    },
+                    {
+                      "text": "✅ Selected Deductible Type: Loss Only\n"
+                    },
+                    {
+                      "text": "✅ Quote Selection & Contingencies saved successfully\n"
+                    },
+                    {
+                      "text": "Step 12: Endorsements Test Started\n"
+                    }
+                  ],
+                  "stderr": [
+                    {
+                      "text": "Save toast not found; continuing but verify manually for this row.\n"
+                    }
+                  ],
+                  "retry": 0,
+                  "startTime": "2026-01-06T07:59:51.401Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "D:\\Landydev_playwright\\test-results\\ACSTD-ACSTD_Inforce-ACSTD-Direct-Excel-chromium\\test-failed-1.png"
+                    },
+                    {
+                      "name": "video",
+                      "contentType": "video/webm",
+                      "path": "D:\\Landydev_playwright\\test-results\\ACSTD-ACSTD_Inforce-ACSTD-Direct-Excel-chromium\\video.webm"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\Landydev_playwright\\test-results\\ACSTD-ACSTD_Inforce-ACSTD-Direct-Excel-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "D:\\Landydev_playwright\\test-results\\ACSTD-ACSTD_Inforce-ACSTD-Direct-Excel-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\Landydev_playwright\\tests\\ACSTD\\ACSTD_Inforce.spec.js",
+                    "column": 31,
+                    "line": 324
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "5b8e58158f0bb50b07a8-5c5a8cfbb7c5ad09fd86",
+          "file": "ACSTD/ACSTD_Inforce.spec.js",
+          "line": 11,
+          "column": 6
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-01-06T07:59:48.996Z",
+    "duration": 175531.622,
+    "expected": 0,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}
