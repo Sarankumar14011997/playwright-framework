@@ -33,6 +33,7 @@ pipeline {
 
         stage('Run Playwright Tests') {
             steps {
+                // Run Playwright tests and generate Allure + JUnit reports
                 bat 'npx playwright test'
             }
         }
@@ -42,7 +43,7 @@ pipeline {
                 // Publish JUnit XML report
                 junit 'results/test-results.xml'
 
-                // Optional: Publish HTML report
+                // Publish Playwright HTML report
                 publishHTML(target: [
                     allowMissing: false,
                     alwaysLinkToLastBuild: true,
@@ -50,6 +51,18 @@ pipeline {
                     reportDir: 'playwright-report',
                     reportFiles: 'index.html',
                     reportName: 'Playwright HTML Report'
+                ])
+
+                // Generate and publish Allure report
+                bat 'allure generate allure-results --clean -o allure-report'
+
+                publishHTML(target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'allure-report',
+                    reportFiles: 'index.html',
+                    reportName: 'Allure Report'
                 ])
             }
         }
