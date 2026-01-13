@@ -8,7 +8,7 @@ import { selectMultiCheckbox } from '../../utils/dropdownHelper.js';
 const XLSX = require('xlsx');
 
 
-test.only('ACSTD-Direct Excel', async ({ page }) => {
+test('ACSTD-Direct Excel', async ({ page }) => {
     enableAutoHighlight(page);
     enableAutoPageWait(page);
 

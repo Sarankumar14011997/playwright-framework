@@ -7,7 +7,7 @@ import { readExcel, excelPathFromProject } from '../../utils/excelUtils.js';
 
 
 
-test('REEXP-Direct Excel', async ({ page }) => {
+test.only('REEXP-Direct Excel', async ({ page }) => {
   enableAutoHighlight(page);
   enableAutoPageWait(page);
 
