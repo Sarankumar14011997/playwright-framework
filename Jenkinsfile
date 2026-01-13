@@ -54,7 +54,8 @@ pipeline {
                 ])
 
                 // Generate and publish Allure report
-                bat 'allure generate allure-results --clean -o allure-report'
+               bat 'npx allure generate allure-results --clean -o allure-report'
+
 
                 publishHTML(target: [
                     allowMissing: false,
