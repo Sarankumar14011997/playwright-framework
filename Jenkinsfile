@@ -52,19 +52,6 @@ pipeline {
                     reportFiles: 'index.html',
                     reportName: 'Playwright HTML Report'
                 ])
-
-                // Generate and publish Allure report
-               bat 'npx allure generate allure-results --clean -o allure-report'
-
-
-                publishHTML(target: [
-                    allowMissing: false,
-                    alwaysLinkToLastBuild: true,
-                    keepAll: true,
-                    reportDir: 'allure-report',
-                    reportFiles: 'index.html',
-                    reportName: 'Allure Report'
-                ])
             }
         }
     }
