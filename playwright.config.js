@@ -9,12 +9,12 @@ export default defineConfig({
   // timeout: 600000, // 10 minutes per test global timeout
   // expect: { timeout: 15000 }, // 15 seconds for individual assertions
 
-   // Performance optimized for i3 + 8GB RAM
+  // Performance optimized for i3 + 8GB RAM
   timeout: 5 * 60 * 1000, // 5 minutes per test
   expect: { timeout: 10000 },
   retries: 0,
   fullyParallel: true,
-   workers: 3,
+  workers: 3,
 
   // Reporters Configuration
   reporter: [
@@ -22,6 +22,7 @@ export default defineConfig({
     ['html', { outputFolder: 'playwright-report', open: 'always' }], // Beautiful HTML report
     ['json', { outputFile: 'report.json' }], // Optional for CI parsing
     ['allure-playwright'], // Allure advanced reporting
+    ['junit', { outputFile: 'results/test-results.xml' }]
   ],
 
   use: {
