@@ -1,0 +1,20 @@
+Rows from Sheet3: 1
+
+--- Running for state: AL | Producer: HHL01-A ---
+Step 1: Application Details Test Started
+Step 2: New Business Test Started
+Step 3: STATE and LOB Selection Test Started
+Step 4: Producer Test Started
+[Playwright Action] Press "Enter" → locator('//input[@placeholder=\'Pick a producer\']')
+Step 5: Client Information Test Started
+[Playwright Action] Press "Tab" → locator('//input[@placeholder="Search Firm Name"]')
+[Playwright Action] Press "Tab" → locator('#effDate2')
+Step 6: Application Details Test Started
+Step 7: Optional Coverages Test Started
+Step 8: Endorsements Test Started
+Step 9: Purchased Options Test Started
+Step 10: Payment Test Started
+Step 11: Capture Balance and Enter Amount Received Test Started
+Captured balance: $597.00 => 597.00
+Step 12: Finalizing Payment Test Started
+Step 12: Policy Queued Test Started

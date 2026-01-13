@@ -36,11 +36,22 @@ pipeline {
                 bat 'npx playwright test'
             }
         }
-    }
 
-    post {
-        always {
-            archiveArtifacts artifacts: 'playwright-report/**', allowEmptyArchive: true
+        stage('Publish Test Results') {
+            steps {
+                // Publish JUnit XML report
+                junit 'results/test-results.xml'
+
+                // Optional: Publish HTML report
+                publishHTML(target: [
+                    allowMissing: false,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'playwright-report',
+                    reportFiles: 'index.html',
+                    reportName: 'Playwright HTML Report'
+                ])
+            }
         }
     }
 }
